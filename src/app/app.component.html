@@ -1,0 +1,20 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container">
+
+      <app-task-inserter [taskIsShowed]="taskIsShowed" (onTaskAdded)="onTaskAdded($event)"></app-task-inserter>
+      <h1>Tasks</h1>
+        <div class="toolbar">
+          <app-button text="Add Task" color="#83a400" (button_click)="AddTask()">
+          </app-button>
+          <app-button text="About" color="white" (button_click)="AboutUs()"></app-button>
+          <app-button text="Delete All" color="white" (button_click)="DeleteAll()"></app-button>
+        </div> 
+        <div class="task-container">
+          <app-taskcomponents [new_task]="new_task"></app-taskcomponents>
+        </div>
+</div> 
+
+
+
+

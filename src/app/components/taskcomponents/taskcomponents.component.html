@@ -1,0 +1,12 @@
+<!-- 
+    OnDeleteTask je event koji je poslan sa task-card.ts koji ce pozivat deleteTask funkciju u taskcomponents.ts
+    OnReminderChecked salje jednu varijablu "task" kako bi znali na kojoj kartici je stisnut X.
+    ako stavim u deleteTask(task) izbacit ce mi cijeli array,ako stavim "t" znat ce koju sam karticu stisnuo
+    i to me zbunjuje. "$event" pozivam jer znam da uzima arq bas iz OnReminderChecked
+    UBUDUCE KORISTI $event KAKO BI IZ CHILD KOMPONENTE UZEO VARIJABLU eventEMITERA -->
+<app-task-card 
+*ngFor="let t of task"
+[task]=t 
+(OnDeleteTask)="deleteTask($event)"
+(OnReminderChecked)="reminderChecked($event)"  
+></app-task-card>

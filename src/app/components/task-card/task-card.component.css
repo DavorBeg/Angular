@@ -1,0 +1,42 @@
+.task-card {
+    user-select: none;
+    width: 477px; 
+    height: 98px;
+    position: relative;
+    background-color: white;
+    margin: 10px 0px 10px 0px;
+
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+    border-left: 0px solid white;
+
+}
+.task-card:hover {
+    transform: scale(1.020);
+}
+.task-card.reminder {
+    border-left: 10px solid #83a400;
+}
+
+.task-time {
+    user-select: none;
+    position: absolute;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 10px 0px 0px 15px;
+    border-bottom: 1px solid black;
+    
+}
+.task-text {
+    user-select: none;
+    position: absolute;
+    top: 55%;
+    font-size: 17px;
+    padding-left: 15px;
+    line-height: 1;
+}
+fa-icon:hover {
+    cursor: pointer;
+}

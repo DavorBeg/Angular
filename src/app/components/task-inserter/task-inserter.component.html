@@ -1,0 +1,24 @@
+<div 
+class="taskInput" 
+[@show]="taskIsShowed ? 'opened' : 'closed'"
+(@show.done)="animationIsDone()"
+(@show.start)="animationStart()"
+[ngStyle]="{'z-index': z_index}"
+>
+    <h1 class="taskinserth1">Insert task</h1>
+    <h4 style="margin-top: 55px;">Add date:</h4>
+    <input class="dateinput" type="date" [(ngModel)]="dateTime">
+    <h4>Add task text:</h4>
+    <input class="textinput" type="text" [(ngModel)]="taskText">
+    <span><input type="checkbox" id="setReminder" [(ngModel)]="reminder"><label for="setReminder">Set reminder</label></span>
+    <app-button text="Insert task" 
+                color="#83a400" 
+                style="padding-top: 55px;" 
+                width="100%" 
+                margin="0px 0px 0px 0px"
+                (button_click)="addNewTask()"
+                ></app-button>
+    
+
+
+</div>
