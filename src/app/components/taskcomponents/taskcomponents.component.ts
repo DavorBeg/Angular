@@ -1,7 +1,9 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { TASK } from '../../taskint'
 import { TaskServiceService } from 'src/app/services/task-service.service';
+
+
 
 @Component({
   selector: 'app-taskcomponents',
@@ -14,6 +16,8 @@ export class TaskcomponentsComponent implements OnInit {
    
   task: TASK[] = [];
   @Input() new_task: TASK;
+  @Input() updateTable: EventEmitter<boolean>;
+
   constructor(private TaskService: TaskServiceService) 
   {
 
@@ -29,8 +33,14 @@ export class TaskcomponentsComponent implements OnInit {
   ngOnInit(): void 
   {
       // Pozivamo TaskService funkciju getTasks .subscribe (jer je Observarble tip) uzimamo tasks i izjednacit cemo lokalnu varijablu sa povratnom tasks iz subscribea
-      
+      if(this.updateTable)
+      {
+        this.updateTable.subscribe(() => {
+          this.task = []
+        })
+      }
       this.TaskService.getTasks().subscribe((tasks) => this.task = tasks)
+      
 
   }
   deleteTask(task) 
@@ -45,6 +55,4 @@ export class TaskcomponentsComponent implements OnInit {
   {
     this.TaskService.updateTask(task).subscribe()
   }
-  
-
 }

@@ -4,7 +4,7 @@
     ako stavim u deleteTask(task) izbacit ce mi cijeli array,ako stavim "t" znat ce koju sam karticu stisnuo
     i to me zbunjuje. "$event" pozivam jer znam da uzima arq bas iz OnReminderChecked
     UBUDUCE KORISTI $event KAKO BI IZ CHILD KOMPONENTE UZEO VARIJABLU eventEMITERA -->
-<app-task-card 
+<app-task-card
 *ngFor="let t of task"
 [task]=t 
 (OnDeleteTask)="deleteTask($event)"

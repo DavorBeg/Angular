@@ -1,0 +1,38 @@
+.aboutbox {
+
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1px;
+    column-gap: -20px;
+    z-index: -1;
+    position: relative;
+    left: +620px;
+    top: -400px;
+    width: 430px;
+    height: 430px;
+    background: #fafafa;
+    border-bottom: 2px solid #F1F1F1;
+    border-left: 2px solid #F1F1F1;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px -7px;
+    padding: 35px;
+    box-sizing: border-box;
+    user-select: none;
+    text-align: left;
+    
+
+    
+}
+h2
+{
+    margin-bottom: 5px;
+    margin-top: 16px;
+    
+}
+p
+{
+    margin-top: 15px;
+    
+}

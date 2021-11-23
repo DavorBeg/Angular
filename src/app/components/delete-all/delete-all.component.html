@@ -1,0 +1,13 @@
+<div 
+[@show]="deleteAllisShowed ? 'opened' : 'closed'"
+class="deleteAll"
+(@show.done)="animationIsDone()"
+(@show.start)="animationStart()"
+[ngStyle]="{'z-index': z_index}"
+>
+<h2>Delete all?</h2>
+<span>
+<app-button text="Yes" color="#DC5C5C" width="150px" (click)=deleteAllTasks()></app-button>
+<app-button text="No" color="#83a400" width="150px" (click)="deleteAllisShowed = false"></app-button>
+</span>
+</div>

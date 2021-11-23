@@ -1,5 +1,7 @@
 {
-  "tasks": [
-
-  ]
+  "tasks": [],
+  "aboutText": {
+    "text": "Task application is made in Angular version. Simple application where you can insert, set reminder and delete your daily tasks. There is 4 parts of this application. Main page where all taskes are displayed, inserter where you can add your new task, about box where you can read all informations about this application and find application source and delete box where you are able to delete all displayed tasks.",
+    "version": "12.2.12"
+  }
 }

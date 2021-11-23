@@ -18,6 +18,7 @@ export class TaskServiceService {
 
   // adresa baze podataka
   private apiUrl = 'http://localhost:3000/tasks';
+  private apiAboutUrl = 'http://localhost:3000/aboutText';
 
   // kako bi koristili module moramo ga definirat u konstruktoru klase
   constructor(private http: HttpClient) 
@@ -40,7 +41,18 @@ export class TaskServiceService {
     return this.http.delete<TASK>(url);
     
   }
+  async deleteAll()
+  {
+    this.http.get<TASK[]>(this.apiUrl).subscribe((res) => {
+      console.log(res.length)
+          res.forEach(element => {
+            this.deleteTask(element).subscribe(() => console.log("deleting element id: " + element.id)) 
+          });
 
+          
+    })
+
+  }
   updateTask(task: TASK): Observable<TASK>
   {
 
@@ -55,6 +67,10 @@ export class TaskServiceService {
   addTask(task: TASK): Observable<TASK>
   {
     return this.http.post<TASK>(this.apiUrl, task, httpOptions)
+  }
+  getAboutText(): Observable<{text: string, version: string}>
+  {
+    return this.http.get<{text: string, version: string}>(this.apiAboutUrl)
   }
 
 

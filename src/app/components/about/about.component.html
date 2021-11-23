@@ -1,0 +1,16 @@
+<div 
+[@show]="aboutIsShowed ? 'opened' : 'closed'"
+(@show.done)="animationIsDone()"
+(@show.start)="animationStart()"
+[ngStyle]="{'z-index': z_index}"
+class="aboutbox"
+>
+    <h2>About application</h2>
+    <p>{{ text.text }}</p>
+    <app-button text="Github" 
+                color="#83a400" 
+                style="padding-top: 0px;"
+                width="300px"
+                (click)="navigateToGitHub()"
+                ></app-button>
+</div>

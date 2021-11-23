@@ -1,0 +1,32 @@
+.deleteAll {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1px;
+    column-gap: -20px;
+    z-index: -1;
+    position: relative;
+    left: 620px;
+    top: -230px;
+    width: 430px;
+    height: 200px;
+    background: white;
+    border-bottom: 2px solid #F1F1F1;
+    border-left: 2px solid #F1F1F1;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px -7px;
+    padding: 35px 0px 35px 0px;
+    box-sizing: border-box;
+    user-select: none;
+}
+h2 {
+    font-size: 30px;
+    margin: 5px 0px 10px 0px;
+}
+span
+{
+    
+    display:inline-flex;
+    padding: 10px;
+}

@@ -18,7 +18,7 @@ import { TaskcomponentsComponent } from '../taskcomponents/taskcomponents.compon
         left: '-350px'
       })),
       state('closed', style({
-        left: '10px'
+        left: '0px'
       })),
       transition('opened => closed', [
         animate('1s ease')

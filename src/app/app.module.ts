@@ -10,7 +10,11 @@ import { TaskCardComponent } from './components/task-card/task-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonComponent } from './components/button/button.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TaskInserterComponent } from './components/task-inserter/task-inserter.component'
+import { TaskInserterComponent } from './components/task-inserter/task-inserter.component';
+import { AboutComponent } from './components/about/about.component';
+import { DeleteAllComponent } from './components/delete-all/delete-all.component'
+
+
 
 
 @NgModule({
@@ -19,8 +23,10 @@ import { TaskInserterComponent } from './components/task-inserter/task-inserter.
     TaskcomponentsComponent,
     TaskCardComponent,
     ButtonComponent,
-    TaskInserterComponent
-  ],
+    TaskInserterComponent,
+    AboutComponent,
+    DeleteAllComponent,
+    ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
